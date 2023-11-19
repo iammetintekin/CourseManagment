@@ -1,0 +1,56 @@
+﻿@using WEB.Models.Basket;
+@model BasketViewModel
+
+<div class="card top-selling overflow-auto">
+    <div class="card-body pb-0">
+        <h5 class="card-title">Seçilen Kurslar </h5>
+        <table class="table table-borderless">
+            @if (Model.Basket == null)
+            {
+                <tr>
+                    <td>
+                        Henüz kurs seçilmedi.
+                    </td>
+                </tr>
+            }
+            else
+            {
+                <thead>
+                    <tr>
+                        <th scope="col">İsim</th>
+                        <th scope="col">Kod</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <form asp-action="Save" asp-controller="Basket" method="post">
+                   
+                    <tr>
+                            @{
+                                var Basket = Model.Basket;
+                            }
+                        <input type="hidden" asp-for="@Basket.UserId" value="@Basket.UserId"/>
+                            @for (int i = 0; i < Basket.SelectedCourses.Count; i++)
+                            {
+                            <td>
+                                <a href="#" class="text-primary fw-bold">@Basket.SelectedCourses[i].Name</a>
+                                <input type="hidden" asp-for="@Basket.SelectedCourses[i].Name" value="@Basket.SelectedCourses[i].Name" />
+                                <input type="hidden" asp-for="@Basket.SelectedCourses[i].Code" value="@Basket.SelectedCourses[i].Code" />
+                                <input type="hidden" asp-for="@Basket.SelectedCourses[i].CourseId" value="@Basket.SelectedCourses[i].CourseId" />
+                            </td>
+                            <td>@Model.Basket.SelectedCourses[i].Code</td>
+                            }
+                    </tr>
+                    <tr>
+                        <td><button class="btn rounded-0 bg-success text-white"> <span class="bi bi-check"></span>  Onay </button></td>
+                    </tr>
+                    </form>
+                    <tr>
+                        <td><a class="btn btn-link rounded-0  text-danger" href="@Url.Action("Delete","Basket")"><span class="bi bi-trash"></span> Temizle </a></td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+
+    </div>
+
+</div>

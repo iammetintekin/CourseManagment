@@ -1,0 +1,57 @@
+﻿@using WEB.Models.Home;
+@model CourseViewModel
+<section class="section profile">
+    <div class="row">
+
+
+        <div class="col-xl-12">
+
+            <div class="card">
+                <div class="card-body pt-3">
+                    <!-- Bordered Tabs -->
+                    <ul class="nav nav-tabs nav-tabs-bordered" role="tablist">
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview" aria-selected="true" role="tab">Overview</button>
+                        </li> 
+
+                    </ul>
+                    <div class="tab-content pt-2">
+
+                        <div class="tab-pane fade show active profile-overview" id="profile-overview" role="tabpanel">
+                            <h5 class="card-title">About</h5>
+                            <p class="small fst-italic">@Model.Course.Description</p>
+
+                            <h5 class="card-title">Kurs Detayları</h5>
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 label">Kategori</div>
+                                <div class="col-lg-9 col-md-8">@Model.Course.Category.Name</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 label ">İsim</div>
+                                <div class="col-lg-9 col-md-8">@Model.Course.Name</div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 label">Kod</div>
+                                <div class="col-lg-9 col-md-8">@Model.Course.Code</div>
+                            </div>
+
+                            <div class="row"> 
+                                <div class="col-md-8">
+                                    @Component.InvokeAsync("UserRegisteredViewComponent",new{CourseId=Model.Course.Id}).Result
+                                </div>
+                            </div> 
+                        </div> 
+
+                    </div><!-- End Bordered Tabs -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,47 @@
+﻿@using WEB.Models.Home;
+@model UserRegisteredCourseBeforeModel
+@if (!Model.Result.Succeed)
+{
+    <div class="icon">
+        <div class="label">Kayıt için giriş yapınız.</div>
+    </div>
+}
+else
+{
+    <table class="table">
+        <tr>
+            @if (Model.UserCourse == null)
+            {
+                if (Model.IsInBasket)
+                {
+                    <td class="green">
+                        <div class="badge bg-success p-2">
+                            <i class="bi bi-basket-fill"></i> Sepete Eklendi 
+                        </div>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <form asp-controller="Basket" asp-action="SaveOrUpdate" method="post">
+                            <input type="hidden" asp-for="CourseItem.Name" value="@Model.Course.Name" />
+                            <input type="hidden" asp-for="CourseItem.Code" value="@Model.Course.Code" />
+                            <input type="hidden" asp-for="CourseItem.CourseId" value="@Model.Course.Id.ToString()" />
+                            <button type="submit" class="btn btn-secondary float-end"> <i class="bi bi-basket"></i> Sepete Ekle</button>
+                        </form>
+                    </td>
+                }
+            }
+            else
+            {
+                <td>
+                    <div class="icon">
+                        <i class="bi bi-check"></i>
+                        <div class="label">Zaten kayıtlı.</div>
+                    </div>
+                </td>
+            }
+        </tr>
+    </table>
+
+}

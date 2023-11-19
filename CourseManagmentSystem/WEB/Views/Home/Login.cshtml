@@ -1,0 +1,44 @@
+﻿@using WEB.Models.Home;
+@model LoginViewModel
+@{
+    Layout = "_Layout";
+}
+<div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+        <div class="card mb-3">
+
+            <div class="card-body">
+
+                <div class="pt-4 pb-2">
+                    <p class="text-center small">Hesabınıza giriş yapın.</p>
+                </div>
+
+                <form class="row g-3 needs-validation" asp-action="Login" method="post" asp-controller="Home" novalidate="">
+
+                    <div class="col-12">
+                        <label for="yourUsername" class="form-label">Kullanıcı Adı</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text" id="inputGroupPrepend">@@</span>
+                            <input type="text" name="Username" asp-for="Username" class="form-control" autocomplete="off" id="yourUsername" required="">
+                            <div class="invalid-feedback">Please enter your username.</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="yourPassword" class="form-label">Şifre</label>
+                        <input type="password" name="Password" asp-for="Password" class="form-control" id="yourPassword" required="">
+                        <div class="invalid-feedback">Please enter your password!</div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary w-100" type="submit">Login</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

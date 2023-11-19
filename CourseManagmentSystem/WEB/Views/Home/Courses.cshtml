@@ -1,0 +1,48 @@
+﻿@using WEB.Models.Home;
+@model CourseListViewModel
+@{
+    ViewData["Title"] = "Kurslarım";
+}
+<div class="card top-selling overflow-auto">
+    <div class="card-body pb-0">
+        <h5 class="card-title">Kurslar <span>| Kayıt Tamamlanan</span></h5> 
+        <table class="table table-stripped">
+            @if (Model.UserCourses == null)
+            {
+                <tr>
+                    <td>
+                        Henüz bir kursa kayıtlı değilsiniz.
+                    </td>
+                </tr>
+            }
+            else
+            {
+                <thead>
+                    <tr>
+                        <th scope="col">Kod</th>
+                        <th scope="col">Kategori</th>
+                        <th scope="col">İsim</th>
+                        <th scope="col">Kayıt Tarihi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        var Courses = Model.UserCourses;
+                    } 
+                    @for (int i = 0; i < Courses.Count; i++)
+                    {
+                        <tr>
+                            <td scope="col"><a href="#" class="btn btn-link">#@Courses[i].Course.Code</a></td>
+                            <td scope="col">@Courses[i].Course.Category.Name</td>
+                            <td scope="col">@Courses[i].Course.Name</td>
+                            <td scope="col">@Courses[i].CreatedDate</td>
+                        </tr>
+
+                    }
+                </tbody>
+            }
+        </table>
+
+    </div>
+
+</div>

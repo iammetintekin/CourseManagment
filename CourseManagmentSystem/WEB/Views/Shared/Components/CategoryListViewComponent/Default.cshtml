@@ -1,0 +1,18 @@
+﻿@model MenuModel
+<nav class="header-nav ms-auto">
+    <ul class="d-flex align-items-center">
+        <li class="nav-item">
+            <a class=" btn btn-link" href="/Home/Index">
+                Tümü
+            </a>
+        </li>
+        @foreach (var item in Model.Items)
+        {
+            <li class="nav-item"> 
+                <a class=" btn btn-link" href="@Url.Action("Index","Home",new{Id=item.ID})">
+                    @item.Text
+                </a> 
+            </li> 
+        }
+    </ul>
+</nav>

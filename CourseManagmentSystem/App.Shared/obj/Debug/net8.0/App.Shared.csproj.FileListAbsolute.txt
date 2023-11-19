@@ -1,0 +1,11 @@
+C:\Users\metot\source\repos\CourseManagmentSystem\App.Shared\bin\Debug\net8.0\App.Shared.deps.json
+C:\Users\metot\source\repos\CourseManagmentSystem\App.Shared\bin\Debug\net8.0\App.Shared.dll
+C:\Users\metot\source\repos\CourseManagmentSystem\App.Shared\bin\Debug\net8.0\App.Shared.pdb
+C:\Users\metot\source\repos\CourseManagmentSystem\App.Shared\obj\Debug\net8.0\App.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\metot\source\repos\CourseManagmentSystem\App.Shared\obj\Debug\net8.0\App.Shared.AssemblyInfoInputs.cache
+C:\Users\metot\source\repos\CourseManagmentSystem\App.Shared\obj\Debug\net8.0\App.Shared.AssemblyInfo.cs
+C:\Users\metot\source\repos\CourseManagmentSystem\App.Shared\obj\Debug\net8.0\App.Shared.csproj.CoreCompileInputs.cache
+C:\Users\metot\source\repos\CourseManagmentSystem\App.Shared\obj\Debug\net8.0\App.Shared.dll
+C:\Users\metot\source\repos\CourseManagmentSystem\App.Shared\obj\Debug\net8.0\refint\App.Shared.dll
+C:\Users\metot\source\repos\CourseManagmentSystem\App.Shared\obj\Debug\net8.0\App.Shared.pdb
+C:\Users\metot\source\repos\CourseManagmentSystem\App.Shared\obj\Debug\net8.0\ref\App.Shared.dll
