@@ -1,7 +1,7 @@
 ## Koç Üniversitesi Kurs Yönetim Paneli
 
 <aside>
-📝 Gereksinimlere yönelik demo proje hazırlanmıştır.
+📝 Gereksinimlere uygun demo proje hazırlanmıştır.
 </aside>
 
 Temel Bilgiler
