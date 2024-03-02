@@ -1,4 +1,4 @@
-## Koç Üniversitesi Kurs Yönetim Paneli
+## Koç Üniversitesi Test Case Kurs Yönetim Paneli
 
 <aside>
 📝 Gereksinimlere uygun demo proje hazırlanmıştır.
